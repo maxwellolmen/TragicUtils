@@ -23,7 +23,7 @@ import net.minecraft.server.v1_9_R1.PacketPlayOutPlayerInfo.PlayerInfoData;
 import net.minecraft.server.v1_9_R1.WorldSettings.EnumGamemode;
 
 public class TabAPI {
-	public static void updateTab() {
+	/*public static void updateTab() {
 		ArrayList<Player> players = new ArrayList<Player>(Bukkit.getOnlinePlayers());
 		
 		World w1 = Bukkit.getWorld(SettingsManager.getWorlds().<String>get("lobby"));
@@ -239,7 +239,7 @@ public class TabAPI {
 		for (Player pl : Bukkit.getOnlinePlayers()) {
 			((CraftPlayer) pl).getHandle().playerConnection.sendPacket(packet);
 		}
-	}
+	} */
 	
 	public static void labelName(Player p) {
 		p.setPlayerListName(ChatColor.GRAY + "[" + ChatColor.GREEN + WordUtils.capitalizeFully(replace(p.getWorld().getName())) + ChatColor.GRAY + "]" + ChatColor.WHITE + " " + p.getName());
