@@ -1,26 +1,12 @@
 package com.maxwellolmen.tablist;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
 
 import org.apache.commons.lang.WordUtils;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.World;
-import org.bukkit.craftbukkit.v1_9_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 
-import com.google.common.collect.Lists;
-import com.mojang.authlib.GameProfile;
 import com.pizzaguy.plugin.SettingsManager;
-
-import net.minecraft.server.v1_9_R1.PacketPlayOutPlayerInfo;
-import net.minecraft.server.v1_9_R1.IChatBaseComponent.ChatSerializer;
-import net.minecraft.server.v1_9_R1.PacketPlayOutPlayerInfo.EnumPlayerInfoAction;
-import net.minecraft.server.v1_9_R1.PacketPlayOutPlayerInfo.PlayerInfoData;
-import net.minecraft.server.v1_9_R1.WorldSettings.EnumGamemode;
 
 public class TabAPI {
 	/*public static void updateTab() {
