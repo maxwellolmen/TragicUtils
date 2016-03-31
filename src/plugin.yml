@@ -1,0 +1,90 @@
+main: com.pizzaguy.plugin.Plugin
+name: TragicUtilities
+version: 0.1
+authors: [The_Pizzaguy, Maxwell Olmen]
+ 
+commands:
+  lore:
+    description: Adds lore to a item
+  name:
+    description: Adds a name to a item
+  spectate:
+    desciption: Switches to and from spectate mode
+    permission: spectate.allow
+  ticket:
+    description: commands for usage of tickets
+    aliases: [ti]
+  itemmail:
+    desciption: Sends item in your hand to specified player
+    aliases: [im]
+  hide:
+    description: Hide yourself or another player.
+  list:
+    description: Lists online players.
+
+permissions:
+  lore.add:
+    description: Allows you to add lore to your item.
+    default: op
+  name.add:
+    description: Allows you to change the name of your item.
+    default: op
+  spectate.allow:
+    description: Gives acces to spectate gamemode
+    default: op    
+  ticket.*:
+    description: all permissions
+    default: op
+    children:
+      ticket.create: true
+      ticket.delete: true
+      ticket.select: true
+      ticket.select.self: true
+      ticket.done: true
+      ticket.deselect: true
+      ticket.list: true
+      ticket.top: true
+  ticket.create:
+    description: Allows creating a ticket
+    default: true
+  ticket.delete:
+    description: Allows deleting a ticket
+    default: true
+  ticket.select:
+    description: Allows selecting a ticket
+    default: op
+  ticket.select.self:
+    description: Allows selecting a ticket
+    default: op
+  ticket.done:
+    description: Allows selecting a ticket
+    default: op
+  ticket.deselect:
+    description: Allows deselecting selected ticket
+    default: op
+  ticket.list:
+    description: Allows looking at the list of tickets
+    default: op
+  tickets.top:
+    description: Allows looking at the score list of moderators
+    default: op
+  itemmail.*:
+    description: Gives access to all commands
+    children:
+       itemmail.send: true
+       itemmail.read: true
+  itemmail.send:
+    description: Gives access to send itemmail
+    default: true
+  itemmail.read:
+    description: Gives access to read itemmail
+    default: true
+  frameprotect.admin:
+    description: allows admins to break frames
+    default: op
+  keep-items.keep:
+    description: Allows player to keep inventory (not XP) upon death.
+    default: op
+  keep-items.keepxp:
+    description: Allows player to keep experience upon death.
+    default: op
