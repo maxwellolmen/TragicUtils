@@ -1,6 +1,7 @@
 package com.pizzaguy.plugin;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Set;
 
 import org.bukkit.configuration.ConfigurationSection;
@@ -78,5 +79,15 @@ public class SettingsManager {
 		} catch (Exception e){
 			Plugin.getPlugin().getLogger().warning("Error while saving yml file.");
 		}
+	}
+	
+	public void reload() {
+	    config = YamlConfiguration.loadConfiguration(file);
+	    
+	    try {
+            config.save(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 	}
 }

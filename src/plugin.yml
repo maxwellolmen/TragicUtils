@@ -21,6 +21,8 @@ commands:
     description: Hide yourself or another player.
   list:
     description: Lists online players.
+  tureload:
+    description: Reloads the utility configurations.
 
 permissions:
   lore.add:

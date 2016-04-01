@@ -22,10 +22,7 @@ public class PlayerJoinHider implements Listener {
 		if (SettingsManager.getHides().<ArrayList<String>>get("hides").contains(p.getUniqueId().toString())) {
 			e.setJoinMessage("");
 			
-			for (Player pl : Bukkit.getOnlinePlayers()) {
-				pl.hidePlayer(p);
-				HiderCommand.hideTab(p);
-			}
+			HiderCommand.hideTab(p);
 		}
 	}
 	
@@ -37,7 +34,6 @@ public class PlayerJoinHider implements Listener {
 			}
 			
 			if (SettingsManager.getHides().<ArrayList<String>>get("hides").contains(p.getUniqueId().toString())) {
-				e.getPlayer().hidePlayer(p);
 				HiderCommand.hideTab(p);
 			}
 		}

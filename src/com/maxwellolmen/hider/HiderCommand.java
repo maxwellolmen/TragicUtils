@@ -53,10 +53,7 @@ public class HiderCommand implements CommandExecutor {
 		}
 		
 		if (hidden.contains(p.getUniqueId().toString())) {
-			for (Player pl : Bukkit.getOnlinePlayers()) {
-				pl.showPlayer(p);
-				showTab(p);
-			}
+			showTab(p);
 			
 			p.sendMessage(ChatColor.GREEN + "You have been shown.");
 			
@@ -66,10 +63,7 @@ public class HiderCommand implements CommandExecutor {
 			
 			return true;
 		} else {
-			for (Player pl : Bukkit.getOnlinePlayers()) {
-				pl.hidePlayer(p);
-				hideTab(p);
-			}
+			hideTab(p);
 			
 			p.sendMessage(ChatColor.GREEN + "You have been hidden.");
 			

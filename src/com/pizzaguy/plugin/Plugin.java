@@ -74,6 +74,7 @@ public class Plugin extends JavaPlugin {
         }
         Bukkit.getPluginManager().registerEvents(new PlayerChangedWorld(), this);
         Bukkit.getPluginManager().registerEvents(new PlayerJoinTab(), this);
+        getCommand("tureload").setExecutor(new ReloadCommand());
     }
 
     @Override
